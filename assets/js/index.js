@@ -10,12 +10,17 @@
 
     $document.ready(function () {
 
+        if (document.body.clientWidth < 769) {
+			      document.body.classList.remove("nav-opened");
+            document.body.classList.add("nav-closed");
+        }
+
         var $postContent = $(".post-content");
         $postContent.fitVids();
 
         $(".scroll-down").arctic_scroll();
 
-        $(".menu-button, .nav-cover, .nav-close").on("click", function(e){
+        $(".menu-button, .nav-title, .nav-cover, .nav-close").on("click", function(e){
             e.preventDefault();
             $("body").toggleClass("nav-opened nav-closed");
         });

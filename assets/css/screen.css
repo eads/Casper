@@ -518,9 +518,13 @@ body.nav-opened .site-wrapper {
 }
 
 .main-nav {
-    position: relative;
-    padding: 35px 40px;
-    margin: 0 0 30px 0;
+    position: fixed;
+    padding: 5px 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 15;
 }
 
 .main-nav a {
@@ -529,14 +533,6 @@ body.nav-opened .site-wrapper {
 }
 
 /* Navigation */
-body.nav-opened .nav-cover {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 240px;
-    bottom: 0;
-    z-index: 200;
-}
 
 .nav {
     position: fixed;
@@ -778,6 +774,7 @@ body.nav-opened .nav {
     display: inline-block;
     float: right;
     height: 38px;
+    height: 38px;
     padding: 0 15px;
     border-style: solid;
     border-width: 1px;
@@ -824,14 +821,14 @@ body.nav-opened .nav {
 }
 
 /* When the navigation is opened */
-    padding: 0 12px;
-    background: #111;
-    border-color: #111;
-    color: #fff;
-    -webkit-transform: translate3D(94px, 0, 0);
-        -ms-transform: translate3D(94px, 0, 0);
-            transform: translate3D(94px, 0, 0);
-    transition: all 0.3s ease;
+.nav-opened .menu-button {
+    /*padding: 0 12px;*/
+    /*background: #111;*/
+    /*border-color: #111;*/
+    /*color: #fff;*/
+    /*-webkit-transform: translate3D(94px, 0, 0);*/
+        /*-ms-transform: translate3D(94px, 0, 0);*/
+    /*transition: all 0.3s ease;*/
     display: none;
 }
 .nav-opened .menu-button .word {
@@ -841,18 +838,18 @@ body.nav-opened .nav {
 
 
 /* Special styles when overlaid on an image*/
-.main-nav.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 70px;
-    border: none;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%);
-}
-.no-cover .main-nav.overlay {
-    background: none;
-}
+/*.main-nav.overlay {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*height: 70px;*/
+    /*border: none;*/
+    /*background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%);*/
+/*}*/
+/*.no-cover .main-nav.overlay {*/
+    /*background: none;*/
+/*}*/
 
 /* The details of your blog. Defined in ghost/settings/ */
 .page-title {

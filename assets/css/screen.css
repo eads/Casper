@@ -192,6 +192,7 @@ body {
     -moz-font-feature-settings: 'kern' 1;
     -o-font-feature-settings: 'kern' 1;
     text-rendering: geometricPrecision;
+    padding-top: 41px;
 }
 
 ::-moz-selection {
@@ -523,7 +524,7 @@ body.nav-opened .site-wrapper {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #fff;
+    background-color: #f5f8fa;
     z-index: 15;
 }
 
@@ -539,7 +540,7 @@ body.nav-opened .site-wrapper {
     top: 0;
     right: 0;
     bottom: 0;
-    z-index: 5;
+    z-index: 20;
     width: 240px;
     opacity: 0;
     background: #111;
@@ -552,10 +553,17 @@ body.nav-opened .site-wrapper {
                         opacity 0.3s ease 0.7s;
 }
 
+@media screen and (max-width: 768px){
+    .nav {
+        width: 100%;
+    }
+}
+
+
 body.nav-closed .nav {
-    -webkit-transform: translate3D(97px, 0, 0);
-        -ms-transform: translate3D(97px, 0, 0);
-            transform: translate3D(97px, 0, 0);
+    -webkit-transform: translate3D(240px, 0, 0);
+        -ms-transform: translate3D(240px, 0, 0);
+            transform: translate3D(240px, 0, 0);
 }
 
 body.nav-opened .nav {
@@ -571,7 +579,7 @@ body.nav-opened .nav {
 
 .nav-title {
     position: absolute;
-    top: 45px;
+    top: 20px;
     left: 30px;
     font-size: 16px;
     font-weight: 100;
@@ -581,7 +589,7 @@ body.nav-opened .nav {
 
 .nav-close {
     position: absolute;
-    top: 38px;
+    top: 13px;
     right: 25px;
     width: 20px;
     height: 20px;
@@ -885,20 +893,6 @@ body.nav-opened .nav {
     color: rgba(0,0,0,0.5);
 }
 
-/* Add subtle load-in animation for content on the home page */
-.home-template .page-title {
-    -webkit-animation: fade-in-down 0.6s;
-    animation: fade-in-down 0.6s;
-    -webkit-animation-delay: 0.2s;
-    animation-delay: 0.2s;
-}
-.home-template .page-description {
-    -webkit-animation: fade-in-down 0.9s;
-    animation: fade-in-down 0.9s;
-    -webkit-animation-delay: 0.1s;
-    animation-delay: 0.1s;
-}
-
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     position: relative;
@@ -1056,7 +1050,6 @@ body:not(.post-template) .post-title {
 
 /* Tweak the .post wrapper style */
 .post-template .post {
-    margin-top: 0;
     border-bottom: none;
     padding-bottom: 0;
 }
@@ -1189,29 +1182,26 @@ body:not(.post-template) .post-title {
    ========================================================================== */
 
 .post-head.main-header {
-    height: 65vh;
-    min-height: 180px;
+    height: auto;
 }
 
 .no-cover.post-head.main-header {
-    height: 85px;
+    height: auto;
     min-height: 0;
     margin-bottom: 0;
     background: transparent;
 }
 
 .tag-head.main-header {
-    height: 40vh;
-    min-height: 180px;
+    height: auto;
 }
 
 .author-head.main-header {
-    height: 40vh;
-    min-height: 180px;
+    height: auto;
 }
 
 .no-cover.author-head.main-header {
-    height: 10vh;
+    height: auto;
     min-height: 100px;
     background: transparent;
 }
